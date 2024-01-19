@@ -89,7 +89,7 @@ app.post("/web", (req, res) => {
   if (req.method === "POST") {
     const { input, tool, domain, user_id } = req.body;
     exec(
-      `cd ./sqlmap; python3 sqlmap.py -u  ${input} --batch`,
+      `/sqlmap python sqlmap.py -u ${input} --batch`,
       (error, stdout, stderr) => {
         if (error) {
           console.error(`exec error: ${error}`);
@@ -110,7 +110,7 @@ app.post("/whatweb", (req, res) => {
   if (req.method === "POST") {
     const { input, tool, domain, user_id } = req.body;
     exec(
-      `cd ./WhatWeb; whatweb ${input} --aggression 3 --verbose`,
+      `/WhatWeb/whatweb ${input} --aggression 3 --verbose`,
       (error, stdout, stderr) => {
         if (error) {
           console.error(`exec error: ${error}`);
@@ -149,6 +149,6 @@ app.post("/api", (req, res) => {
 let port = process.env.PORT || 3001;
 const host = "0.0.0.0";
 
-app.listen(port, host, () => {
+app.listen(port, () => {
   console.log(`Server listening on ${host}:${port}`);
 });
