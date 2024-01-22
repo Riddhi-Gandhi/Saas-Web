@@ -63,7 +63,7 @@ const Register = () => {
   };
 
   return (
-    <div className="flex flex-col items-center h-full bg-dark bg-cover">
+    <div className="flex flex-col items-center h-full bg-cover" id="colo">
       {loader && (
         <div className="z-10 absolute flex flex-row items-center justify-center h-screen w-full">
           <Loader />
@@ -72,15 +72,15 @@ const Register = () => {
 
       <div className="flex mt-16 md:mt-12 ">
         {/* <img src={logo} alt="logo" className="inline w-10 h-10" /> */}
-        <h1 className="text-2xl md:text-4xl cursor-pointer pl-0 font-bold bg-clip-text text-light">
-          Redteaming and VAPT
+        <h1 className="text-2xl md:text-4xl cursor-pointer pl-0 font-bold bg-clip-text" id="txt1">
+          SaaS
         </h1>
       </div>
       <form
         onSubmit={register}
-        className="p-6 bg-dark flex flex-col items-start drop-shadow-2xl mt-16 md:mt-12 w-5/6 sm:w-1/2 lg:w-1/3 rounded-xl shadow-md shadow-light"
+        className="p-6 bg-dark flex flex-col items-start drop-shadow-2xl mt-16 md:mt-12 w-5/6 sm:w-1/2 lg:w-1/3 rounded-xl shadow-md shadow-light" id="cd1"
       >
-        <h2 class="text-light font-semibold mb-4 text-2xl self-center">
+        <h2 class="font-semibold mb-4 text-2xl self-center" id="txt1">
           REGISTER
         </h2>
         <TextBox
@@ -150,6 +150,7 @@ const Register = () => {
         <TextBox
           textInput="text-md text-white"
           textLabel="text-md text-white"
+          
           width="w-full"
           height="h-12"
           hint="Confirm Password"
@@ -166,18 +167,20 @@ const Register = () => {
         <button
           type="submit"
           className="shadow-none w-full text-light bg-black font-bold py-2 px-4 hover:bg-darkMed hover:border hover:border-light rounded-xl h-10  my-4"
+          id="cd2"
         >
           Continue
         </button>
       </form>
       <div className="mt-8 text-xs md:text-sm sm:w-1/2 lg:w-full flex items-center w-full md:px-1 px-9">
         <hr className="border-t w-full border-light flex-grow" />
-        <span className=" text-light w-full text-center">Already a user?</span>
+        <span className="w-full text-center" id="txt1">Already a user?</span>
         <hr className="border-t w-full border-light flex-grow" />
       </div>
       <button
         onClick={() => navigate("/login")}
         className=" shadow-none w-82 text-light bg-black font-bold py-2 px-4 hover:bg-black rounded-xl h-10 my-4"
+      id="txt1"
       >
         Login to your account
       </button>

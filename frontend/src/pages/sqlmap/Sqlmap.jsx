@@ -117,7 +117,7 @@ function Sqlmap() {
   return (
     <div
       className="flex flex-col items-center pt-32 bg-dark min-h-screen h-full
-     w-full"
+     w-full" id="colo"
     >
       <button
         className="fixed right-8 bottom-4 shadow-none text-[#d7dfe7] bg-light text-lg  font-bold py-2 px-2 rounded-full h-16 my-4 w-16"
